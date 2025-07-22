@@ -13,7 +13,8 @@
       "type": "template-404",
       "settings": {
         "title": "404",
-        "subtitle_title": "The page that you are looking for is not found."
+        "subtitle_title": "The page that you are looking for is not found.",
+        "button_label": "/"
       }
     }
   },
