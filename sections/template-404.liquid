@@ -12,7 +12,12 @@
         </p>
     </div>
     <div class="my-4">
-            <a href="{{ section.settings.button_label }}"></a>
+        {% if section.settings.button_url == blank %} 
+            {% assign shop_url = shop.secure_url %}
+        {% else %}
+            {% assign shop_url = section.settings.button_url %}
+        {% endif %}
+        <a href="{{ shop_url }}" class="px-4 inline py-2 text-base font-medium shadow bg-green-600 hover:bg-green-800 text-white">{{ section.settings.button_label }}</a>
     </div>
 </div>
 
@@ -36,9 +41,14 @@
             },
             {
                 "type": "text",
-                "default": "404",
+                "default": "Back to homepage",
                 "label": "The page you are going to link this into.",
                 "id": "button_label"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button URL"
             }
         ]
 }
