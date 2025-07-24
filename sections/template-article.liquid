@@ -4,9 +4,32 @@
 {% assign img = article.image %} 
 <time datetime="{{ date_time }}">{{ date_time }}</time>
 <img 
-    src="{{ img | image_url: 'small' }}" 
+    src="{{ img | image_url: width: 1100 }}" 
     alt="{{ img.alt | escape }}" 
     width="{{ img.width }}" 
     height="{{ img.height }}" 
     loading="lazy"
 >
+<div class="">
+    {{ article.content }}
+</div>
+
+{% schema %}
+{
+    "name": "template-article",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "enable_author",
+            "default": true,
+            "label": "Display Author Name"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_publish_date",
+            "default": true,
+            "label": "Display Published Date" 
+        }
+    ]
+}
+{% endschema %}
