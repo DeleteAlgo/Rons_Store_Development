@@ -1,28 +1,52 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "template":{
-            "type": "template-article",
-            "block": {
-                "title": {
-                    "type": "article_title"
-                },
-                "author": {
-                    "type": "article_author"
-                },
-                "published_date": {
-                    "type": "article_published_date"
-                },
-                "featured_image": {
-                    "type": "feature_image"
-                },
-                "content": {
-                    "type": "article_content"
-                }
-            },
-            "block_order": ["title", "author", "published_date", "feature_image", "content"]
+  "sections": {
+    "template": {
+      "type": "template-article",
+      "blocks": {
+        "article_title_LejYce": {
+          "type": "article_title",
+          "settings": {}
+        },
+        "article_content_WJ899e": {
+          "type": "article_content",
+          "settings": {}
+        },
+        "article_published_date_TeTtJt": {
+          "type": "article_published_date",
+          "settings": {}
+        },
+        "article_author_qr7RDe": {
+          "type": "article_author",
+          "settings": {}
+        },
+        "feature_image_rKVF7z": {
+          "type": "feature_image",
+          "settings": {}
         }
-    },
-    "order": [
-        "template"
-    ]
+      },
+      "block_order": [
+        "article_title_LejYce",
+        "article_content_WJ899e",
+        "article_published_date_TeTtJt",
+        "article_author_qr7RDe",
+        "feature_image_rKVF7z"
+      ],
+      "settings": {
+        "enable_author": true,
+        "enable_publish_date": true
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
 }
