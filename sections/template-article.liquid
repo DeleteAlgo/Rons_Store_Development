@@ -1,0 +1,12 @@
+<h1>{{ article.title }}</h1>
+<small>{{ article.author }}</small>
+{% assign date_time = article.published_at | date: '%Y-%m-%d' %}
+{% assign img = article.image %} 
+<time datetime="{{ date_time }}">{{ date_time }}</time>
+<img 
+    src="{{ img | image_url: 'small' }}" 
+    alt="{{ img.alt | escape }}" 
+    width="{{ img.width }}" 
+    height="{{ img.height }}" 
+    loading="lazy"
+>
