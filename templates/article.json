@@ -13,7 +13,7 @@
                     "type": "article_published_date"
                 },
                 "featured_image": {
-                    "type": "feature_image"
+                    "type": "featured_image"
                 },
                 "content": {
                     "type": "article_content"
@@ -23,7 +23,7 @@
                 "title",
                 "author",
                 "published_date",
-                "feature_image",
+                "featured_image",
                 "content"
             ],
             "settings": {
