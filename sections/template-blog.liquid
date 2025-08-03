@@ -1,0 +1,37 @@
+{% paginate blog.articles by 3 by section.settings.number_of_blog_posts %}
+    {% for article in blog.articles %}
+        <div>
+            {% if article.image != blank %}
+                {% assign img = article.image %}
+                <img src="{{ img | image_url: width: "1100" }}" alt="{{ img.alt }}" width="{{ img.width }}" height="{{ img.height }}" >
+            {% else %}
+                {{ 'image' |  placeholder_svg_tag: 'w-20' }}
+            {% endif %}
+            
+            <h1>{{ article.title }}</h1>
+            
+            {% if article.excerpt.size > 0 %}
+            {% else %}
+                <p>{{ article.content |  strip_html | truncatewords: 25}}</p>    
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endpaginate %}
+
+{% schema %}
+{
+    "name": "Blog",
+    "settings": [
+        {
+            "type": "range",
+            "id": "number_of_blog_posts",
+            "step": 1,
+            "min": 1,
+            "max": 6,
+            "label": "Blog posts per page",
+            "default": 3
+
+        }
+    ]
+}
+{% endschema %}
